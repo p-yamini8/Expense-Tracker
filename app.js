@@ -26,6 +26,7 @@ const Expense = require('./models/expense')
 
 const userRoutes = require('./routes/users')
 const expenseRoutes = require('./routes/expense')
+const purchaseRoutes = require('./routes/purchase')
 
 //middlewares
 app.use(morgan('combined', { stream: accessLogStream }))
@@ -37,7 +38,7 @@ app.use(compression())
 //routes
 app.use('/user', userRoutes)
 app.use('/expense', expenseRoutes)
-
+ app.use('/purchase',purchaseRoutes)
 
 
 
