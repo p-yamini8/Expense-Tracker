@@ -19,7 +19,21 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'view','login',"login.html"));
 })
 app.use(express.static(path.join(__dirname,'view')));
+const sequelize = require('./util/database')
+const User = require('./models/users')
 
+const userRoutes = require('./routes/users')
+
+
+//middlewares
+app.use(morgan('combined', { stream: accessLogStream }))
+app.use(cors())
+app.use(bodyParser.json())
+app.use(helmet())
+app.use(compression())
+
+//routes
+app.use('/user', userRoutes)
 
 sequelize.sync()
   .then(() => {

@@ -1,0 +1,71 @@
+/* login.css */
+
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Auth container */
+#auth {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* Form inputs */
+#auth input[type="email"],
+#auth input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Submit button */
+#auth button {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  background-color: #2575fc;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#auth button:hover {
+  background-color: #1a5edb;
+}
+
+/* Links */
+#auth a {
+  display: inline-block;
+  margin: 5px 10px;
+  text-decoration: none;
+  color: #2575fc;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+#auth a:hover {
+  color: #1a5edb;
+}
