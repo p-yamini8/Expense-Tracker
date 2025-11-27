@@ -35,4 +35,12 @@
        
       }
     });
-
+ const forgotlink=document.getElementById('forgotlink');
+ forgotlink.addEventListener('click',async(e)=>{
+  e.preventDefault();
+  window.location.href = "../forgotpassword/forgotpassword.html";
+    });
+      showSignup.addEventListener('click',e => {
+      e.preventDefault()
+        window.location.href = '../signup/signup.html'
+    });
