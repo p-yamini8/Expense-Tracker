@@ -1,0 +1,115 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Main Container */
+#expenses {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h3 {
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Pagination & Buttons Section */ 
+#prev-btn, #next-btn, #download, #show-leaderboard {
+  background: #2196F3;
+  margin: 5px;
+}
+ #download:hover, #show-leaderboard:hover {
+  background: #1976D2;
+}
+
+/* Leaderboard Section */
+#leaderboard {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e9f5ff;
+  border-radius: 8px;
+  border: 1px solid #b3e0ff;
+}
+
+/* Logout Link */
+#logout {
+  display: inline-block;
+  margin-top: 10px;
+  color: #f44336;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#logout:hover {
+  text-decoration: underline;
+}
+
+button:disabled {
+  background-color: #ccc;  /* Grey background */
+  color: #666;             /* Dark grey text */
+  cursor: not-allowed;     /* Show not-allowed cursor */
+  opacity: 0.6;            /* Slightly transparent */
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+    <link rel="stylesheet" href="expense.css" />
+</head>
+
+<body>
+  <div id="expenses" >
+  <h3>Welcome, <span id="user"></span></h3>
+<!-- 
+  Expense Add Form -->
+  <form id="exp-form">
+      
+    <input type="number" id="exp_amt" placeholder="Amount" required />
+    <input type="text" id="disc" placeholder="Description" required />
+    <select id="ctg" required>
+      <option value="">Category</option>
+      <option>food</option>
+      <option>books</option>
+      <option>electronics</option>
+    </select>
+     <input type="text" id="note" placeholder="Note (optional)" /> 
+    <button type="submit" id="add-expense-btn">Add</button>
+     <a href="#"id="logout">Back to login</a>
+     </form>
+      <h2>Day to day Expenses</h2>
+        <table border="1" id="daily-expense-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Note</th>
+                    
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div>
+            <button id="prev-btn">Previous</button>
+            <span id="page-info"></span>
+            <button id="next-btn">Next</button>
+        </div>
+
+        <!-- Additional Buttons -->
+        <div>
+            <button id="download">Download</button>
+            <button id="show-leaderboard">Leaderboard</button>
+        </div>
+       
+         </div>
+        <div id="leaderboard" style="display: none;"></div>
+       
+
+
+    <script src="/view/expense/expense.js"></script>
+</body>
+</html>
