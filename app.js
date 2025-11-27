@@ -42,12 +42,17 @@ app.use('/expense', expenseRoutes)
 app.use('/password',resetPasswordRoutes)
 
 
-
+const Forgotpassword = require('./models/forgotpassword')
 const Downloadurl = require('./models/downloadurls');
 User.hasMany(Expense)
 Expense.belongsTo(User)
 
+User.hasMany(Forgotpassword)
+Forgotpassword.belongsTo(User)
 
+User.hasMany(Downloadurl,{
+  foreignKey:'userId'
+});
 
 User.hasMany(Downloadurl,{
   foreignKey:'userId'
