@@ -1,4 +1,4 @@
-const uuid = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 const sgMail = require('@sendgrid/mail');
 const bcrypt = require('bcrypt');
 
@@ -11,7 +11,7 @@ const forgotpassword = async (req, res) => {
         console.log("Email is",email)
         const user = await User.findOne({where : { email }});
         if(user){
-            const id = uuid.v4();
+            const id = uuidv4();
             console.log("uuid",id)
             user.createForgotpassword({ id , active: true })
                 .catch(err => {
