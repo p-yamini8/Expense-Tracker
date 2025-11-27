@@ -39,6 +39,25 @@ app.use('/user', userRoutes)
 app.use('/expense', expenseRoutes)
 
 
+
+
+
+const Downloadurl = require('./models/downloadurls');
+User.hasMany(Expense)
+Expense.belongsTo(User)
+
+
+
+User.hasMany(Downloadurl,{
+  foreignKey:'userId'
+});
+Downloadurl.belongsTo(User,
+  {
+  foreignKey:'userId'
+  }
+);
+
+
 sequelize.sync()
   .then(() => {
     app.listen(process.env.PORT || 3000)
